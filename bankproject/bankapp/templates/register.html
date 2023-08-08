@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+{% block content %}
+  <form action="register" method="Post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter your name"><br>
+        <input type="password" name="password" placeholder="Enter password">
+        <input type="submit">
+
+        </form>
+{% endblock %}

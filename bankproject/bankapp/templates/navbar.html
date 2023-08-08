@@ -1,0 +1,49 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+
+
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+
+  <a class="navbar-brand" href="#">
+
+    Indian Bank
+</a>
+
+
+
+<a class="btn btn-warning" href="{% url 'bankapp:login' %}"> Login </a>
+ <a class="btn btn-warning" href="{% url 'bankapp:register' %}"> Register</a>
+
+    <div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Branches
+  </button>
+            <a class="dropdown-menu" aria-labelledby="navbardropdown"></a>
+
+            <a class="dropdown-item" href="{% url 'bankapp:branches' %}">KOLLAM</a>
+            <a class="dropdown-item" href="{% url 'bankapp:branch1' %}">KOTTAYAM</a>
+            <a class="dropdown-item" href="{% url 'bankapp:branch2' %}">ERNAKULAM</a>
+            <a class="dropdown-item" href="{% url 'bankapp:branch3' %}">TRIVANDRUM</a>
+            <a class="dropdown-item" href="{% url 'bankapp:branch4' %}">ALAPPUZHA</a>
+
+
+
+    </div>
+</nav>
+
+
+{% block body %}
+{%  endblock %}
+</body>
+</html>
